@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+       
+<tiles-definitions>
+    <definition name="index"
+        		template="/WEB-INF/views/index.jsp">
+        
+        <put-attribute name="header" value="/WEB-INF/tiles/header.jsp" />
+        <put-attribute name="menu" value="/WEB-INF/tiles/menu.jsp" />
+        <put-attribute name="body" value="" />
+        <put-attribute name="footer" value="/WEB-INF/tiles/footer.jsp" />
+    </definition>
+    
+    <definition name="registration"
+        		extends="index">
+        
+        <put-attribute name="body" value="/WEB-INF/tiles/registration.jsp" />
+    </definition>
+    
+    <definition name="success"
+        		extends="index">
+        
+        <put-attribute name="body" value="/WEB-INF/tiles/success.jsp" />
+    </definition>
+    
+    <definition name="login"
+    			extends="index">
+    			
+		<put-attribute name="body" value="/WEB-INF/tiles/login.jsp"/>    			
+    </definition>
+    
+    <definition name="admin/index"
+    			template="/WEB-INF/views/admin/index.jsp">
+    			
+		<put-attribute name="header" value="" />
+        <put-attribute name="menu" value="/WEB-INF/tiles/menu.jsp" />
+        <put-attribute name="submenu" value="/WEB-INF/tiles/admin/menu.jsp" />
+        <put-attribute name="body" value="/WEB-INF/tiles/admin/index.jsp" />
+        <put-attribute name="footer" value="" />    			
+    </definition>
+    
+    <definition name="users/index"
+    		    extends="admin/index">
+    		    
+		<put-attribute name="body" value="/WEB-INF/tiles/users/index.jsp" />    		    
+    </definition>
+    
+    <definition name="users/edit"
+    		    extends="admin/index">
+	
+		<put-attribute name="body" value="/WEB-INF/tiles/form_user.jsp" />
+    </definition>
+</tiles-definitions>       

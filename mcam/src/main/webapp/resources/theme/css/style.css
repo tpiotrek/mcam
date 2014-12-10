@@ -1,0 +1,13 @@
+@CHARSET "UTF-8";
+
+body {
+	background: #efefef;
+}
+
+#layout {
+	width: 70em;
+	min-height: 60em;
+	margin: 0em auto;
+	border: 1px solid #6b6b6b;
+	background: #cecece;
+}
